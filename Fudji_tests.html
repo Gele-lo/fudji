@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dynamic Responsive Gallery</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#7c5cff;
+      --glass:rgba(255,255,255,0.04);
+      --radius:14px;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071028 0%, #0f1724 100%);
+      color:#e6eef8;
+      padding:32px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+    }
+
+    .gallery-wrap{
+      width:1200px;
+      max-width:calc(100% - 48px);
+      padding:24px;
+    }
+
+    .thumbs{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+      gap:12px;
+    }
+    .thumb{
+      position:relative;
+      overflow:hidden;
+      border-radius:12px;
+      cursor:pointer;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transition:transform .3s ease, filter .3s ease;
+    }
+    .thumb:hover img{
+      transform:scale(1.08);
+      filter:blur(2px) brightness(0.8);
+    }
+
+    @media(max-width:700px){
+      .thumbs{grid-template-columns:repeat(auto-fit, minmax(120px,1fr));}
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-wrap">
+    <div class="thumbs">
+      <div class="thumb"><img src="https://imgs.search.brave.com/RcpWvL9QQVnHH5LkyUTMgOpjfqHfAyV428fFSyHYLCA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9mYXN0/bHkuNHNxaS5uZXQv/aW1nL2dlbmVyYWwv/NjAweDYwMC8xMjU0/MDk3NThfOVRLQzUz/aFFnYzFGV2JwYUlr/MVNqZDRUbjUtWEp5/bFJialFYSG1DdXFy/cy5qcGc" alt="SHSS"></div>
+      <div class="thumb"><img src="https://imgs.search.brave.com/2tcwZMMeA-mO_MGtAvEPZMgApp9EDMj5EYlYkzgFY04/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aGVr/ZW55YXRpbWVzY2Ru/LWVzZTdkM2U3Z2hk/bmJmYTkuejAxLmF6/dXJlZmQubmV0L3By/b2RpbWFnZXMvdXBs/b2Fkcy8yMDIyLzA3/L3VzaXUtNzUweDM3/NS5qcGc" alt="Usiu_Aniversary"></div>
+      <div class="thumb"><img src="https://imgs.search.brave.com/2AttTQGmhw_43c9FnUbEk6LahAF7zTAhm2em4dznrSg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9mYXN0/bHkuNHNxaS5uZXQv/aW1nL2dlbmVyYWwv/NjAweDYwMC8xMjU0/MDk3NThfazd1bWtI/TXNXVzZEc0Qwdmhs/cnE3amo5ZHRaalll/RS1qbHhKMmlCa0tl/QS5qcGc" alt="School_hostels"></div>
+      <div class="thumb"><img src="https://imgs.search.brave.com/vFD6NHD-4GGeL985eZNa6cLAxjl3cLwCantuN1gWTzk/rs:fit:500:0:1:0/g:ce/aHR0cDovL2NoaWNr/YWJvdXR0b3duLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAw/OC8wOC9VU0lVLUhv/c3RlbC5qcGc" alt="U$1u"></div>
+      <div class="thumb"><img src="https://imgs.search.brave.com/6skCb5GAhCQKFwPdB1jz_dOJfawZBpWJzNaog1eDseM/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9vY2Ru/LmV1L3B1bHNjbXMt/dHJhbnNmb3Jtcy8x/L041b2t0a3BUVVJC/WHk4NU9UWTBZbVl6/TkRVME1EZzFOemsx/T1RNMFpUTXlNalZo/WXprM1pUYzBNUzVx/Y0dlU2xRTUFBTTBF/V00wQ2NaTUZ6UUVz/ekt3" alt="Mombasa_road_nairobi"></div>
+    </div>
+  </div>
+</body>
+</html>
